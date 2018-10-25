@@ -1,0 +1,26 @@
+#A Day in the supermarket exercise on Codecademy
+shopping_list = ["banana", "orange", "apple"]
+
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pear": 15
+}
+    
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pear": 3
+}
+
+# Write your code below!
+def compute_bill(food):
+  total = 0
+  for food in food:
+    if stock[food]>0: # checks if the desired item(food) is in stock
+  		total = total + prices[food] # describes how much money the inventory is worth
+    stock[food] = stock[food]-1 #subtracts one from the available stock to show that an item(food) was removed
+  return total 
+print total 
